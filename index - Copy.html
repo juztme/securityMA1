@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cipher Cracker</title>
+  </head>
+  
+  <body>
+    <h1>Caesar</h1>
+    <!--<h2>Encode a message!</h2>-->
+    <textarea id="textToEncode" placeholder="Write your text here"></textarea> <br/>
+    <p>Provide a number between 1 and 26.</p>
+    <input id="positiveShifter" type="number" placeholder="Number" min="-26" max="26"/><br/><br/>
+    <button id="encoder">Encode!</button>
+    <button id="decoder">Decode!</button>
+    <p id="encodingResult"></p>
+    <p id="decodingResult"></p>
+    
+    
+    <!--<h2>Decode a message!</h2>
+    <textarea id="textToDecode" placeholder="Write your text here"></textarea> <br/>
+    <p>Provide a number between -26 and -1.</p>
+    <input id="negativeShifter" type="number" placeholder="Number" min="-26" max="-1"/><br/><br/>
+    <button id="decoder">Decode!</button>
+    <p id="decodingResult"></p>
+    <hr/>-->
+    
+    <script src="caesar2.js"></script>
+    <script src="caesarTest.js"></script>
+    <script src="vigenere.js"></script>
+  </body>
+</html>
