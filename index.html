@@ -2,22 +2,30 @@
 <html>
   <head>
     <title>Cipher Cracker</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   
   <body>
-    <h1>Caesar</h1>
-    <!--<h2>Encode a message!</h2>-->
-    <textarea id="userInput" placeholder="Write your text here"></textarea> <br/>
-    <p>Provide a number between 1 and 26.</p>
-    <input id="shifter" type="number" placeholder="Number" min="1" max="26"/><br/><br/>
-    <button id="encoder">Encode!</button>
-    <button id="decoder">Decode!</button>
-    <p id="outputResult"></p>
+    <div id="caesarContainer">
+      <h1>Caesar</h1>
+      <textarea class="form-control" id="userInput" placeholder="Write your text here"></textarea> <br/>
+      <p>Provide a number between 1 and 26.</p>
+      <input class="form-control" id="shifter" type="number" placeholder="Number" min="1" max="26"/><br/><br/>
+      <button class="btn btn-default" id="encoder">Encode!</button>
+      <button class="btn btn-default" id="decoder">Decode!</button>
+      <p id="outputResult"></p>
+    </div>
+      
     
-    <!--<script src="caesar2.js"></script>-->
-    <script src="caesar3.js"></script>
-    <script src="vigenere.js"></script>
-    <script src="caesarTests.js"></script>
-    <script src="decoderTests.js"></script>
+    <script src="jquery-2.2.1.min.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="js/caesar.js"></script>
+    <script src="js/vigenere.js"></script>
+    
+    <!--used for automated testing-->
+    <script src="js/caesarTests.js"></script>
+    <script src="js/decoderTests.js"></script>
+    
   </body>
 </html>

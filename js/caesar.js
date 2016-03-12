@@ -1,4 +1,3 @@
-//var encoder = document.getElementById("encoder"),
 var outputResult = document.getElementById("outputResult");
  
 var caesarCipher = function(text, shift){
@@ -8,12 +7,13 @@ var caesarCipher = function(text, shift){
   var finalText = "";
   
   for (var i=0; i<text.length; i++){
-    // get each character of the string that the user inputs
+    //get each character of the string that the user inputs
     var userInput = text.charAt(i);
     
     //link the user's textarea input with the array
     var bigLetterIndex = bigcaseLetters.indexOf(userInput);
     var smallLetterIndex = smallcaseLetters.indexOf(userInput);
+    
     //if the character doesn't exist in the arrays
     if (smallLetterIndex === -1 && bigLetterIndex === -1){
       
@@ -57,8 +57,9 @@ var caesarCipher = function(text, shift){
   return finalText;
 };
 
+//what happens when the user presses on the buttons
 document.getElementById("encoder").addEventListener("click",function(){
-  //grab the text and shift from the user's input
+  //grab the text and the shift from the user's input  
   var textToEncode = document.getElementById("userInput").value;
   var shifter = parseInt(document.getElementById("shifter").value);
   
