@@ -10,7 +10,7 @@ var caesarCipher = function(text, shift){
     //get each character of the string that the user inputs
     var userInput = text.charAt(i);
     
-    //link the user's textarea input with the array
+    //link the user's textarea input with the arrays
     var bigLetterIndex = bigcaseLetters.indexOf(userInput);
     var smallLetterIndex = smallcaseLetters.indexOf(userInput);
     
@@ -25,32 +25,32 @@ var caesarCipher = function(text, shift){
     }
       
     if (smallLetterIndex === -1){
-      var encodedLetter = bigLetterIndex + shift;
+      var shiftedLetter = bigLetterIndex + shift;
       //exactly the same as a while loop which checks if encLet >= 26 and if yes, then substracts 26 from the number
       //encodedLetter = encodedLetter % 26; 
       
       //bigcaseLetters.length is used so that we don't have to hardcode the maximum number of index that the array has; the same goes for the one in the else statement
-      encodedLetter = encodedLetter % bigcaseLetters.length;
+      shiftedLetter = shiftedLetter % bigcaseLetters.length;
       
-      if (encodedLetter <= -1){
-        encodedLetter += 26;
+      if (shiftedLetter <= -1){
+        shiftedLetter += 26;
       }
       
-      var letterToAdd = bigcaseLetters[encodedLetter];
+      var letterToAdd = bigcaseLetters[shiftedLetter];
       
       finalText += letterToAdd;
       
     } else { 
-      var encodedLetter = smallLetterIndex + shift;
+      var shiftedLetter = smallLetterIndex + shift;
       //encodedLetter = encodedLetter % 26;
       
-      encodedLetter = encodedLetter % smallcaseLetters.length;
+      shiftedLetter = shiftedLetter % smallcaseLetters.length;
       
-      if (encodedLetter <= -1){
-        encodedLetter += 26;
+      if (shiftedLetter <= -1){
+        shiftedLetter += 26;
       }
       
-      var letterToAdd = smallcaseLetters[encodedLetter];
+      var letterToAdd = smallcaseLetters[shiftedLetter];
       finalText += letterToAdd;
     }  
   }

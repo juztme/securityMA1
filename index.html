@@ -7,7 +7,8 @@
   </head>
   
   <body>
-    <div id="caesarContainer">
+    
+    <div class="container">
       <h1>Caesar</h1>
       <textarea class="form-control" id="userInput" placeholder="Write your text here"></textarea> <br/>
       <p>Provide a number between 1 and 26.</p>
@@ -18,7 +19,17 @@
     </div>
       
     
-    <script src="jquery-2.2.1.min.js"></script>
+    <div class="container">
+      <h1>Vigenere</h1>
+      <textarea class="form-control" id="textToEdit" placeholder="Write your text here"></textarea> <br/>
+      <p>Provide a key made of letters</p>
+      <input class="form-control" id="vigKey" placeholder="Write your key here" /> <br/>
+      <button class="btn btn-default" id="vigenereEncoder">Encode!</button>
+      <button class="btn btn-default" id="vigenereDecoder">Decode!</button>
+      <p id="vigenereOutput"></p>
+    </div>
+    
+    <script src="js/jquery-2.2.1.min.js"></script>
     <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
     <script src="js/caesar.js"></script>
     <script src="js/vigenere.js"></script>
