@@ -3,6 +3,6 @@
   margin: 0 auto;
 }
 
-#shifter{
-  width:17%;
+#shifter, .numField{
+  width:20%;
 }

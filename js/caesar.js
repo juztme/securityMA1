@@ -14,7 +14,9 @@ var caesarCipher = function(text, shift){
     var bigLetterIndex = bigcaseLetters.indexOf(userInput);
     var smallLetterIndex = smallcaseLetters.indexOf(userInput);
     
+    
     //if the character doesn't exist in the arrays
+    //http://www.w3schools.com/jsref/jsref_indexof.asp  - why -1
     if (smallLetterIndex === -1 && bigLetterIndex === -1){
       
       //leave the character as it is and append it to the final text
@@ -26,7 +28,7 @@ var caesarCipher = function(text, shift){
       
     if (smallLetterIndex === -1){
       var shiftedLetter = bigLetterIndex + shift;
-      //exactly the same as a while loop which checks if encLet >= 26 and if yes, then substracts 26 from the number
+      //exactly the same as a while loop which checks if shiftedLetter >= 26 and if yes, then subtracts 26 from the number
       //encodedLetter = encodedLetter % 26; 
       
       //bigcaseLetters.length is used so that we don't have to hardcode the maximum number of index that the array has; the same goes for the one in the else statement
