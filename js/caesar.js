@@ -28,9 +28,9 @@ var caesarCipher = function(text, shift){
       
     if (smallLetterIndex === -1){
       var shiftedLetter = bigLetterIndex + shift;
-      //exactly the same as a while loop which checks if shiftedLetter >= 26 and if yes, then subtracts 26 from the number
-      //encodedLetter = encodedLetter % 26; 
       
+      //exactly the same as a while loop which checks if shiftedLetter >= 26 and if yes, then subtracts 26 from the number
+      //it's like shiftedLetter = shiftedLetter % 26; 
       //bigcaseLetters.length is used so that we don't have to hardcode the maximum number of index that the array has; the same goes for the one in the else statement
       shiftedLetter = shiftedLetter % bigcaseLetters.length;
       
